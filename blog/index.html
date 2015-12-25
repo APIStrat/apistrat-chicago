@@ -3,26 +3,30 @@ layout: default
 title: APIStrat Chicago - Blog
 ---
 
-<div class="post">
-	<div class="entry">
+<div class="span12">
 
-		<p><a href="/blog.xml"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="25" align="right" style="padding: 25px;" /></a></p>
+	<div class="post">
+		<div class="entry">
 
-		{% for post in paginator.posts %}
+			<p><a href="/blog.xml"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="25" align="right" style="padding: 25px;" /></a></p>
 
-			<h2><a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
-			<i><span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></i>
-			<br /><br />
-			{% if post.image != null %}
-				<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">
-					<img src="{{ post.image }}" width="75" />
-				</a>
-			{% endif %}
-			{{ post.content }}
-			<br /><br />
-			<hr />
+			{% for post in paginator.posts %}
 
-		{% endfor %}
+				<h2><a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+				<i><span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></i>
+				<br /><br />
+				{% if post.image != null %}
+					<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">
+						<img src="{{ post.image }}" width="75" />
+					</a>
+				{% endif %}
+				{{ post.content }}
+				<br /><br />
+				<hr />
 
+			{% endfor %}
+
+		</div>
 	</div>
+
 </div>

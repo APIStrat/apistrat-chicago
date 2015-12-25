@@ -20,7 +20,7 @@ title: APIStrat Chicago - Blog
 						<img src="{{ post.image }}" width="75" />
 					</a>
 				{% endif %}
-				{% if post.content contains '<!--break-->' %}
+				{{ post.content | split:'<!--break-->' |  first | strip_html  }}
 				<br /><br />
 				<hr />
 

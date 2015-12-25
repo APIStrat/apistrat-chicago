@@ -11,7 +11,7 @@ title: APIStrat Chicago - Blog
 		{% for post in paginator.posts %}
 
 			<h2><a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
-			<i><span class="small">on</span> <span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></i>
+			<i><span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></i>
 			<br /><br />
 			{% if post.image != null %}
 				<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}">

@@ -83,28 +83,14 @@ title: APIStrat Chicago 2014
 
   <div>
 
-    <h4 class="mtop20"><a href="http://chicago2014.apistrat.com//2014Chicago/2014/10/29/thank-you-chicago-for-making-apistrat-a-success/">Thank You Chicago For Making APIStrat A Success</a> <small>October, 29 2014</small></h4>
-    <p>  We wanted to take a moment to thank everyone who made @APIStrat Chicago such a success.  Thank you to our sponsors, speakers, and to the 3Scale API Infrastructure team. <a href="http://chicago2014.apistrat.com//2014Chicago/2014/10/29/thank-you-chicago-for-making-apistrat-a-success/">Read more</a><p>
-    </div>
-    <hr/>
+    {{% for post in site.posts limit:10 %}}
 
-    <div>
-      <h4 class="mtop20"><a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/25/apistrat-2014--day-1/">APIStrat 2014 - DAY 1</a> <small>September, 25 2014</small></h4>
-      <p>  Today's been a long and fun day at APIStrat!  We've officially kicked our 2014 conference this morning with keynotes from Julia Ferraioli, Joshua Greenough and Andrew Nacin. <a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/25/apistrat-2014--day-1/">Read more</a><p>
-    </div>
-    <hr/>
+      <h4 class="mtop20"><a href="{{ post.source }}">{{ post.title }}</a> <small>{{ post.date | date:"%m-%d-%Y" }}</small></h4>
+      <p>{{ post.content | split:'<!--break-->' |  first | strip_html  }} <a href="{{ post.source }}">Read more</a><p>
+      </div>
+      <hr/>
 
-    <div>
-      <h4 class="mtop20"><a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/24/as-apistrat-chicago-kicks-off-apistrat-europe-and-us-for-2015-are-in-the-works--we-want-your-input/">As APIStrat Chicago Kicks Off, APIStrat Europe And US for 2015 are In The Works - We Want Your Input!</a> <small>September, 24 2014</small></h4>
-      <p>  Attendees are deep in workshops on the first day if this year&rsquo;s APIStrat and it&rsquo;s going to be an awesome event!  So many great speakers, sponsors and attendees talking APIs. <a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/24/as-apistrat-chicago-kicks-off-apistrat-europe-and-us-for-2015-are-in-the-works--we-want-your-input/">Read more</a><p>
-    </div>
-    <hr/>
-
-    <div>
-      <h4 class="mtop20"><a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/19/apistrat-investor-chat/">APIStrat Investor Chat</a> <small>September, 19 2014</small></h4>
-      <p>  APIs are changing the way business is done, and startups are often at the forefront of that change.  We&rsquo;re lucky to have two experienced investors taking the stage at APIStrat for the Investor Fireside chat to dig down into how startups can leverage APIs to disrupt and how APIs affect their investment decisions. <a href="http://chicago2014.apistrat.com//2014Chicago/2014/09/19/apistrat-investor-chat/">Read more</a><p>
-    </div>
-    <hr/>
+    {% endfor %}
 
   </div>
 

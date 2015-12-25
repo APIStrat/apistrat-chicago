@@ -81,17 +81,15 @@ title: APIStrat Chicago 2014
   <h2 class="apistrat" style="font-size: 18px;">LATEST NEWS</h2>
   <hr/>
 
-  <div>
+  {% for post in site.posts limit:10 %}
 
-    {% for post in site.posts limit:10 %}
+    <div>
+      <h4 class="mtop20"><a href="{{ post.source }}">{{ post.title }}</a> <small>{{ post.date | date:"%m-%d-%Y" }}</small></h4>
+      <p>{{ post.content | split:'<!--break-->' |  first | strip_html  }} <a href="{{ post.source }}">Read more</a><p>
+    </div>
+    <hr/>
 
-      <div>
-        <h4 class="mtop20"><a href="{{ post.source }}">{{ post.title }}</a> <small>{{ post.date | date:"%m-%d-%Y" }}</small></h4>
-        <p>{{ post.content | split:'<!--break-->' |  first | strip_html  }} <a href="{{ post.source }}">Read more</a><p>
-      </div>
-      <hr/>
-
-    {% endfor %}
+  {% endfor %}
 
   </div>
 

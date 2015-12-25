@@ -1,5 +1,5 @@
 title:        APIStrat Chicago 2014
-url:          http://chicago2014.apistrat.com/
+url:          http://chicago2014dev.apistrat.com/
 version:      1.1.1
 author:
   name:       'Kin Lane'
@@ -14,9 +14,9 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 paginate: 100
 paginate_path: "/blog/page:num"
 
-production_url : http://chicago2014.apistrat.com/
+production_url : http://chicago2014dev.apistrat.com/
 
-BASE_PATH : http://chicago2014.apistrat.com/
+BASE_PATH : http://chicago2014dev.apistrat.com/
 
 categories_path : /categories.html
 tags_path : /tags.html
